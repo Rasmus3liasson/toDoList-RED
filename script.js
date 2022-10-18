@@ -9,8 +9,9 @@ const array = [];
 addBtn.addEventListener("click", function () {
   while (input.value === "") {
     wrongMessageText.innerText = "Input must not be empty";
+    wrongMessageText.classList.toggle("wrongMessageError");
 
-    task.removeChild(checkBtn, trashBtn);
+    task.removeChild(trashBtn);
   }
   if (input.value != "") {
     wrongMessageText.innerText = null;
@@ -24,14 +25,9 @@ addBtn.addEventListener("click", function () {
   textlabel.innerText = input.value;
   task.appendChild(textlabel);
 
-  let checkBtn = document.createElement("button");
-  checkBtn.classList.add("checkBtn");
-  checkBtn.innerText = "Completed";
-  task.appendChild(checkBtn);
-
   let trashBtn = document.createElement("img");
   trashBtn.classList.add("trashBtn");
-  trashBtn.src = "trashcan.jpeg";
+  trashBtn.src = "trashcan.png";
   task.appendChild(trashBtn);
 
   input.value = "";
@@ -41,29 +37,16 @@ addBtn.addEventListener("click", function () {
   taskObject.status = "Not Completed";
   array.push(taskObject);
 
-  checkBtn.addEventListener("click", function () {
-    if (checkBtn.innerText === "Not Completed") {
-      checkBtn.removeEventListener("click");
-    } else {
-      taskDone.innerHTML++;
-      checkBtn.innerText = "Not Completed";
-      taskObject.status = "Completed";
-    }
-  });
   textlabel.addEventListener("click", function () {
-    if (checkBtn.innerText === "Completed") {
-      textlabel.removeEventListener("click");
-    } else {
-      checkBtn.innerText = "Completed";
-      taskDone.innerHTML--;
-      taskObject.status = "Not Completed";
-    }
+    taskDone.innerHTML++;
+    taskObject.status = "Completed";
+    textlabel.classList.toggle("textLabelOpacity");
   });
 
   trashBtn.addEventListener("click", function () {
-    if (checkBtn.innerText === "Not Completed") {
-      taskDone.innerHTML--;
-    }
+    taskDone.innerHTML--;
+    taskObject.status = "Not Completed";
+
     toDoContainer.removeChild(task);
     array.pop(taskObject);
   });

@@ -7,22 +7,27 @@
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
-      href="path/to/font-awesome/css/font-awesome.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <title>ToDOList Red</title>
+
+    <title>My ToDo</title>
   </head>
   <body>
-    <div class="container">
-      <h1>My ToDo</h1>
-      <p id="taskCompleted"></p>
-      <div id="inputField">
-        <input id="input" type="text" />
-        <button class="btn">OK</button>
-      </div>
-      <div id="task">
-        <h2 id="taskText"></h2>
-        <button>f2ed</button>
-      </div>
+    <div class="main">
+      <header>
+        <h1>My ToDo</h1>
+      </header>
+      <section>
+        <p id="completed"><span id="task-done">0</span> completed</p>
+
+        <div class="inputContainer">
+          <input type="text" id="inputField" />
+          <button id="addBtn">OK</button>
+          <p id="wrongMessageText"><em></em></p>
+
+          <div id="toDoContainer"></div>
+        </div>
+      </section>
     </div>
 
     <script src="script.js"></script>

@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: red;
+  background-image: linear-gradient(to right, pink, white);
+}
+.main {
+  background-color: white;
+  width: 700px;
+  min-height: 400px;
+  height: auto;
+  margin: auto;
+}
+header,
+section {
+  margin-left: 300px;
+  margin-top: 15px;
+}
+h1 {
+  font-size: 400%;
+  margin-left: -50px;
+  padding-top: 30px;
+}
+#completed {
+  font-size: larger;
+  margin-left: 1.5rem;
+}
+
+input {
+  margin-top: 3rem;
+  width: 250px;
+  height: 35px;
+
+  margin-left: -60px;
+}
+#addBtn {
+  width: 50px;
+  height: 35px;
+  font-size: larger;
+  margin-left: 4px;
+}
+#wrongMessageText {
+  color: rgb(246, 6, 6);
+  font-style: italic;
+  font-weight: 500;
+  padding-top: 7px;
+}
+ul {
+  padding: 0.7rem;
+  margin: 10px 0;
+}
+
+.trashBtn {
+  width: 40px;
+  height: auto;
+}

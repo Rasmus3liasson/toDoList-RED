@@ -40,13 +40,15 @@ addBtn.addEventListener("click", function () {
   textlabel.addEventListener("click", function () {
     textlabel.classList.toggle("textLabelOpacity");
 
-    while (taskObject.status == "Not Completed") {
+    if (taskObject.status == "Not Completed") {
       taskObject.status = "Completed";
       taskDone.innerHTML++;
       textlabel.removeEventListener();
     }
-    taskObject.status == "Not Completed";
-    taskDone.innerHTML--;
+    if (taskObject.status == "Completed") {
+      taskObject.status = "Not Completed";
+      taskDone.innerHTML--;
+    }
   });
 
   trashBtn.addEventListener("click", function () {

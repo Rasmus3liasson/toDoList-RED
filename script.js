@@ -38,13 +38,18 @@ addBtn.addEventListener("click", function () {
   array.push(taskObject);
 
   textlabel.addEventListener("click", function () {
-    taskDone.innerHTML++;
-    taskObject.status = "Completed";
     textlabel.classList.toggle("textLabelOpacity");
+
+    while (taskObject.status == "Not Completed") {
+      taskObject.status = "Completed";
+      taskDone.innerHTML++;
+      textlabel.removeEventListener();
+    }
+    taskObject.status == "Not Completed";
+    taskDone.innerHTML--;
   });
 
   trashBtn.addEventListener("click", function () {
-    taskDone.innerHTML--;
     taskObject.status = "Not Completed";
 
     toDoContainer.removeChild(task);

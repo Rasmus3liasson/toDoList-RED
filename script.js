@@ -3,14 +3,13 @@ const addBtn = document.querySelector("#addBtn");
 const toDoContainer = document.querySelector("#toDoContainer");
 const taskDone = document.querySelector("#task-done");
 const wrongMessageText = document.querySelector("#wrongMessageText");
-
+const rubrik = document.querySelector("#rubrik");
 const array = [];
 
 addBtn.addEventListener("click", function () {
   while (input.value === "") {
     wrongMessageText.innerText = "Input must not be empty";
     wrongMessageText.classList.toggle("wrongMessageError");
-
     task.removeChild(trashBtn);
   }
   if (input.value != "") {
@@ -42,7 +41,10 @@ addBtn.addEventListener("click", function () {
 
     if (taskObject.status == "Not Completed") {
       taskObject.status = "Completed";
-      taskDone.innerHTML++;
+
+      setTimeout(function () {
+        taskDone.innerHTML++;
+      }, 900);
       textlabel.removeEventListener();
     }
     if (taskObject.status == "Completed") {
@@ -56,5 +58,9 @@ addBtn.addEventListener("click", function () {
 
     toDoContainer.removeChild(task);
     array.pop(taskObject);
+  });
+
+  rubrik.addEventListener("click", function () {
+    taskDone.innerHTML = 0;
   });
 });

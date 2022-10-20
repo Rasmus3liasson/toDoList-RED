@@ -88,6 +88,7 @@ input {
   font-style: arial;
   font-size: 132%;
   padding-top: 7px;
+  margin-left: -35px;
 }
 .wrongMessageError {
   animation: blink;

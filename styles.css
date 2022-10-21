@@ -96,15 +96,17 @@ input {
 }
 #toDoContainer {
   padding-bottom: 35px;
+  justify-content: center;
 }
 ul {
   padding: 0.4rem;
-  margin: 10px 0;
+
   animation: SlideUpTask;
   animation-duration: 0.6s;
 }
 .textLabel {
   font-size: 200%;
+  overflow-wrap: break-word;
 }
 .textLabelOpacity {
   animation: textOpacity;
@@ -116,7 +118,7 @@ ul {
 .trashBtn {
   width: 40px;
   height: 30px;
-  margin-bottom: -7px;
+
   margin-left: 10px;
   opacity: 0.6;
 }
@@ -170,13 +172,13 @@ ul {
 @keyframes textOpacity {
   0% {
     text-decoration: line-through;
-    text-decoration-thickness: 0.2rem;
+    text-decoration-thickness: 2px;
   }
 
   100% {
     opacity: 0.3;
     transition-delay: 2s;
     text-decoration: line-through;
-    text-decoration-thickness: 0.2rem;
+    text-decoration-thickness: 2px;
   }
 }

@@ -7,8 +7,8 @@ body {
   background-image: linear-gradient(
     to top,
 
-    rgb(240, 123, 152),
-    rgb(246, 196, 209)
+    rgb(221, 121, 121),
+    rgb(246, 206, 206)
   );
   height: 100vh;
 }

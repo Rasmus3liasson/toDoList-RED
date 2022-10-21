@@ -103,6 +103,9 @@ input {
 }
 #toDoContainer {
   padding-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
 }
 ul {
   padding: 0.4rem;

@@ -4,12 +4,15 @@ const toDoContainer = document.querySelector("#toDoContainer");
 const taskDone = document.querySelector("#task-done");
 const wrongMessageText = document.querySelector("#wrongMessageText");
 const rubrik = document.querySelector("#rubrik");
+
 const array = [];
 
 addBtn.addEventListener("click", function () {
-  while (input.value === "") {
+  if (input.value === "") {
     wrongMessageText.innerText = "Input must not be empty";
-    wrongMessageText.classList.toggle("wrongMessageError");
+    wrongMessageText.classList.remove("wrongMessageError");
+    wrongMessageText.scrollBy(0, 0);
+    wrongMessageText.classList.add("wrongMessageError");
     task.removeChild(trashBtn);
   }
   if (input.value != "") {

@@ -110,6 +110,7 @@ input {
 ul {
   padding: 0.4rem;
   margin-top: 13px;
+  cursor: pointer;
   animation: SlideUpTask;
   animation-duration: 0.6s;
 }
